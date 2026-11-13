@@ -1,0 +1,6 @@
+{
+  "name": "Nidova Health",
+  "description": "AI-powered medical report understanding, deterministic clinical safety checks, multilingual summaries, and longitudinal health tracking.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,544 @@
+{
+  "patients": [
+    {
+      "id": "pat_aarav",
+      "name": "Aarav Rao",
+      "dob": "1988-04-12",
+      "relation": "Self (Primary)",
+      "language": "en",
+      "createdAt": "2026-11-10T09:30:00.000Z",
+      "ownerUserId": "usr_aarav"
+    },
+    {
+      "id": "pat_lakshmi",
+      "name": "Lakshmi Rao",
+      "dob": "1958-09-23",
+      "relation": "Mother (Caregiver Access)",
+      "language": "kn",
+      "createdAt": "2026-11-10T09:30:00.000Z",
+      "ownerUserId": "usr_aarav"
+    }
+  ],
+  "familyAccess": [
+    {
+      "id": "fam_1",
+      "patientId": "pat_aarav",
+      "memberName": "Priya Rao",
+      "memberEmail": "priya.rao@example.com",
+      "role": "viewer",
+      "canUpload": false,
+      "canEditProfile": false,
+      "status": "accepted",
+      "createdAt": "2026-11-10T09:30:00.000Z"
+    },
+    {
+      "id": "fam_2",
+      "patientId": "pat_lakshmi",
+      "memberName": "Aarav Rao",
+      "memberEmail": "aarav.rao@example.com",
+      "role": "caregiver",
+      "canUpload": true,
+      "canEditProfile": true,
+      "status": "accepted",
+      "createdAt": "2026-11-10T09:30:00.000Z"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc_cbc_aug",
+      "patientId": "pat_aarav",
+      "filename": "Aarav_Metabolic_CBC_Aug2026.pdf",
+      "fileType": "pdf",
+      "storedFilename": null,
+      "documentCategory": "lab_report",
+      "status": "analyzed",
+      "statusMessage": "Analyzed with deterministic range checks.",
+      "reportDate": "2026-08-14",
+      "extractedText": "Nidova Diagnostic Centre\nPatient: Aarav Rao | Date: 2026-08-14\nHemoglobin: 13.4 g/dL (Ref: 13.0 - 17.0)\nFasting Blood Glucose: 118 mg/dL (Ref: 70 - 99)\nHbA1c: 6.4 % (Ref: 4.0 - 5.6)\nSerum Potassium: 4.2 mmol/L (Ref: 3.5 - 5.1)\nSerum Creatinine: 0.9 mg/dL (Ref: 0.7 - 1.3)",
+      "ocrConfidence": 98.5,
+      "isUncertain": false,
+      "uploadedAt": "2026-08-14T10:15:00.000Z"
+    },
+    {
+      "id": "doc_cbc_nov",
+      "patientId": "pat_aarav",
+      "filename": "Aarav_Followup_Panel_Nov2026.pdf",
+      "fileType": "pdf",
+      "storedFilename": null,
+      "documentCategory": "lab_report",
+      "status": "analyzed",
+      "statusMessage": "Analyzed with deterministic range checks.",
+      "reportDate": "2026-11-08",
+      "extractedText": "Nidova Diagnostic Centre\nPatient: Aarav Rao | Date: 2026-11-08\nHemoglobin: 12.1 g/dL (Ref: 13.0 - 17.0)\nFasting Blood Glucose: 106 mg/dL (Ref: 70 - 99)\nHbA1c: 6.1 % (Ref: 4.0 - 5.6)\nPotassium: 4.3 mmol/L (Ref: 3.5 - 5.1)\nVitamin B12: 285 pg/mL (Ref range not printed on lab sheet)",
+      "ocrConfidence": 96.2,
+      "isUncertain": false,
+      "uploadedAt": "2026-11-08T11:20:00.000Z"
+    },
+    {
+      "id": "doc_rx_nov",
+      "patientId": "pat_aarav",
+      "filename": "Dr_Mehta_Prescription_Nov2026.jpg",
+      "fileType": "jpeg",
+      "storedFilename": null,
+      "documentCategory": "prescription",
+      "status": "analyzed",
+      "statusMessage": "Prescription medicines extracted.",
+      "reportDate": "2026-11-09",
+      "extractedText": "Dr. S. Mehta, MD (Internal Medicine)\nRx:\n1. Tab. Metformin 500 mg — 1-0-1 after meals\n2. Tab. Cyanocobalamin 1500 mcg — Once daily after breakfast for 30 days",
+      "ocrConfidence": 88.4,
+      "isUncertain": false,
+      "uploadedAt": "2026-11-09T14:00:00.000Z"
+    },
+    {
+      "id": "doc_lakshmi_lab",
+      "patientId": "pat_lakshmi",
+      "filename": "Lakshmi_Renal_Electrolytes_Nov2026.pdf",
+      "fileType": "pdf",
+      "storedFilename": null,
+      "documentCategory": "lab_report",
+      "status": "analyzed",
+      "statusMessage": "Critical rule triggered during deterministic check.",
+      "reportDate": "2026-11-11",
+      "extractedText": "City Clinical Labs\nPatient: Lakshmi Rao | Date: 2026-11-11\nHemoglobin: 6.4 g/dL (Ref: 12.0 - 15.5) — CRITICAL LOW\nSerum Potassium: 4.6 mmol/L (Ref: 3.5 - 5.1)\nSerum Creatinine: 1.1 mg/dL (Ref: 0.6 - 1.1)",
+      "ocrConfidence": 97,
+      "isUncertain": false,
+      "uploadedAt": "2026-11-11T08:40:00.000Z"
+    }
+  ],
+  "testResults": [
+    {
+      "id": "res_3fcd39cd",
+      "documentId": "doc_cbc_aug",
+      "canonicalKey": "hemoglobin",
+      "rawName": "Hemoglobin",
+      "value": 13.4,
+      "rawValue": "13.4",
+      "unit": "g/dL",
+      "referenceMin": 13,
+      "referenceMax": 17,
+      "status": "normal",
+      "flagReason": "Value falls within the report reference range.",
+      "userVerified": true
+    },
+    {
+      "id": "res_d24d79a7",
+      "documentId": "doc_cbc_aug",
+      "canonicalKey": "glucose",
+      "rawName": "Fasting Blood Glucose",
+      "value": 118,
+      "rawValue": "118",
+      "unit": "mg/dL",
+      "referenceMin": 70,
+      "referenceMax": 99,
+      "status": "high",
+      "flagReason": "Value (118) is above the report reference maximum (99).",
+      "userVerified": true
+    },
+    {
+      "id": "res_78ddc11e",
+      "documentId": "doc_cbc_aug",
+      "canonicalKey": "hba1c",
+      "rawName": "HbA1c",
+      "value": 6.4,
+      "rawValue": "6.4",
+      "unit": "%",
+      "referenceMin": 4,
+      "referenceMax": 5.6,
+      "status": "high",
+      "flagReason": "Value (6.4) is above the report reference maximum (5.6).",
+      "userVerified": true
+    },
+    {
+      "id": "res_71dcd210",
+      "documentId": "doc_cbc_aug",
+      "canonicalKey": "potassium",
+      "rawName": "Potassium",
+      "value": 4.2,
+      "rawValue": "4.2",
+      "unit": "mmol/L",
+      "referenceMin": 3.5,
+      "referenceMax": 5.1,
+      "status": "normal",
+      "flagReason": "Value falls within the report reference range.",
+      "userVerified": true
+    },
+    {
+      "id": "res_d7d0c6b4",
+      "documentId": "doc_cbc_aug",
+      "canonicalKey": "creatinine",
+      "rawName": "Serum Creatinine",
+      "value": 0.9,
+      "rawValue": "0.9",
+      "unit": "mg/dL",
+      "referenceMin": 0.7,
+      "referenceMax": 1.3,
+      "status": "normal",
+      "flagReason": "Value falls within the report reference range.",
+      "userVerified": true
+    },
+    {
+      "id": "res_56a1f010",
+      "documentId": "doc_cbc_nov",
+      "canonicalKey": "hemoglobin",
+      "rawName": "Hemoglobin",
+      "value": 12.1,
+      "rawValue": "12.1",
+      "unit": "g/dL",
+      "referenceMin": 13,
+      "referenceMax": 17,
+      "status": "low",
+      "flagReason": "Value (12.1) is below the report reference minimum (13).",
+      "userVerified": true
+    },
+    {
+      "id": "res_861b34ac",
+      "documentId": "doc_cbc_nov",
+      "canonicalKey": "glucose",
+      "rawName": "Fasting Blood Glucose",
+      "value": 106,
+      "rawValue": "106",
+      "unit": "mg/dL",
+      "referenceMin": 70,
+      "referenceMax": 99,
+      "status": "high",
+      "flagReason": "Value (106) is above the report reference maximum (99).",
+      "userVerified": true
+    },
+    {
+      "id": "res_67bb5809",
+      "documentId": "doc_cbc_nov",
+      "canonicalKey": "hba1c",
+      "rawName": "HbA1c",
+      "value": 6.1,
+      "rawValue": "6.1",
+      "unit": "%",
+      "referenceMin": 4,
+      "referenceMax": 5.6,
+      "status": "high",
+      "flagReason": "Value (6.1) is above the report reference maximum (5.6).",
+      "userVerified": true
+    },
+    {
+      "id": "res_71f0191c",
+      "documentId": "doc_cbc_nov",
+      "canonicalKey": "potassium",
+      "rawName": "Potassium",
+      "value": 4.3,
+      "rawValue": "4.3",
+      "unit": "mmol/L",
+      "referenceMin": 3.5,
+      "referenceMax": 5.1,
+      "status": "normal",
+      "flagReason": "Value falls within the report reference range.",
+      "userVerified": true
+    },
+    {
+      "id": "res_2eb7b364",
+      "documentId": "doc_cbc_nov",
+      "canonicalKey": "vitamin_b12",
+      "rawName": "Vitamin B12",
+      "value": 285,
+      "rawValue": "285",
+      "unit": "pg/mL",
+      "referenceMin": null,
+      "referenceMax": null,
+      "status": "unclassified",
+      "flagReason": "No reference range printed on the report. Never assumed normal (SR-03).",
+      "userVerified": true
+    },
+    {
+      "id": "res_3c9e41a5",
+      "documentId": "doc_lakshmi_lab",
+      "canonicalKey": "hemoglobin",
+      "rawName": "Hemoglobin",
+      "value": 6.4,
+      "rawValue": "6.4",
+      "unit": "g/dL",
+      "referenceMin": 12,
+      "referenceMax": 15.5,
+      "status": "critical",
+      "flagReason": "Hemoglobin is critically low (6.4 <= 7 g/dL).",
+      "userVerified": true
+    },
+    {
+      "id": "res_d5913a55",
+      "documentId": "doc_lakshmi_lab",
+      "canonicalKey": "potassium",
+      "rawName": "Potassium",
+      "value": 4.6,
+      "rawValue": "4.6",
+      "unit": "mmol/L",
+      "referenceMin": 3.5,
+      "referenceMax": 5.1,
+      "status": "critical",
+      "flagReason": "The laboratory report explicitly states a critical or panic value.",
+      "userVerified": true
+    },
+    {
+      "id": "res_cce34918",
+      "documentId": "doc_lakshmi_lab",
+      "canonicalKey": "creatinine",
+      "rawName": "Serum Creatinine",
+      "value": 1.1,
+      "rawValue": "1.1",
+      "unit": "mg/dL",
+      "referenceMin": 0.6,
+      "referenceMax": 1.1,
+      "status": "critical",
+      "flagReason": "The laboratory report explicitly states a critical or panic value.",
+      "userVerified": true
+    }
+  ],
+  "medicines": [
+    {
+      "id": "med_1",
+      "documentId": "doc_rx_nov",
+      "medicineName": "Metformin",
+      "strength": "500 mg",
+      "instructions": "1-0-1 after meals (as written on prescription)",
+      "isUnclear": false
+    },
+    {
+      "id": "med_2",
+      "documentId": "doc_rx_nov",
+      "medicineName": "Cyanocobalamin (Vitamin B12)",
+      "strength": "1500 mcg",
+      "instructions": "Once daily after breakfast for 30 days",
+      "isUnclear": false
+    }
+  ],
+  "alerts": [
+    {
+      "id": "alert_c9128b73",
+      "patientId": "pat_lakshmi",
+      "documentId": "doc_lakshmi_lab",
+      "severity": "critical",
+      "source": "deterministic_rule:1.0.0-draft-requires-clinical-review",
+      "reason": "Hemoglobin is critically low (6.4 <= 7 g/dL).",
+      "guidance": "Please seek prompt medical evaluation or urgent care if you feel unwell. Do not wait for automated summaries.",
+      "acknowledged": false,
+      "acknowledgedAt": null,
+      "createdAt": "2026-11-11T08:40:00.000Z"
+    },
+    {
+      "id": "alert_b5849f35",
+      "patientId": "pat_lakshmi",
+      "documentId": "doc_lakshmi_lab",
+      "severity": "critical",
+      "source": "lab_reported",
+      "reason": "The laboratory report explicitly states a critical or panic value.",
+      "guidance": "Contact your doctor or nearest clinic immediately to review this flagged laboratory result.",
+      "acknowledged": false,
+      "acknowledgedAt": null,
+      "createdAt": "2026-11-11T08:40:00.000Z"
+    },
+    {
+      "id": "alert_91d7339d",
+      "patientId": "pat_lakshmi",
+      "documentId": "doc_lakshmi_lab",
+      "severity": "critical",
+      "source": "lab_reported",
+      "reason": "The laboratory report explicitly states a critical or panic value.",
+      "guidance": "Contact your doctor or nearest clinic immediately to review this flagged laboratory result.",
+      "acknowledged": false,
+      "acknowledgedAt": null,
+      "createdAt": "2026-11-11T08:40:00.000Z"
+    }
+  ],
+  "analyses": [
+    {
+      "id": "ana_1",
+      "documentId": "doc_cbc_nov",
+      "summary": "What your report states:\nYour November 2026 panel lists Hemoglobin at 12.1 g/dL (reference 13.0–17.0 g/dL, marked Low), Fasting Blood Glucose at 106 mg/dL (reference 70–99 mg/dL, marked High), HbA1c at 6.1% (reference 4.0–5.6%, marked High), and Potassium at 4.3 mmol/L (within 3.5–5.1 mmol/L, Normal). Vitamin B12 is 285 pg/mL with no printed reference range, so it is marked Unable to Classify.\n\nPlain-language explanation:\nCompared to your August 2026 report, Fasting Glucose (118 to 106 mg/dL) and HbA1c (6.4% to 6.1%) moved lower while remaining above the printed reference limit. Hemoglobin is slightly below the lab reference minimum. Because Vitamin B12 lacks a printed reference range on this sheet, it is not assumed normal. Please review all findings with your physician.",
+      "suggestedQuestions": [
+        "My Hemoglobin moved from 13.4 to 12.1 g/dL — should we check iron or ferritin levels?",
+        "What target range for HbA1c and Fasting Glucose do you recommend before my next checkup?",
+        "Which reference range applies to my Vitamin B12 result of 285 pg/mL?"
+      ],
+      "language": "en",
+      "readingLevel": "standard",
+      "modelVersion": "gemini-4-hydrogen",
+      "createdAt": "2026-11-08T11:21:00.000Z"
+    },
+    {
+      "id": "ana_2",
+      "documentId": "doc_cbc_aug",
+      "summary": "What your report states:\nYour August 2026 panel shows Hemoglobin (13.4 g/dL), Potassium (4.2 mmol/L), and Serum Creatinine (0.9 mg/dL) within printed reference ranges. Fasting Blood Glucose (118 mg/dL) and HbA1c (6.4%) are above the printed reference limits.\n\nPlain-language explanation:\nHbA1c reflects average blood sugar over roughly 2–3 months. Discussing these baseline values with your doctor helps plan nutrition, exercise, or follow-up testing.",
+      "suggestedQuestions": [
+        "How often should I repeat my HbA1c and Fasting Glucose tests?"
+      ],
+      "language": "en",
+      "readingLevel": "standard",
+      "modelVersion": "gemini-4-hydrogen",
+      "createdAt": "2026-08-14T10:16:00.000Z"
+    },
+    {
+      "id": "ana_3",
+      "documentId": "doc_rx_nov",
+      "summary": "What your report states:\nThis prescription from Dr. S. Mehta lists Tab. Metformin 500 mg (1-0-1 after meals) and Tab. Cyanocobalamin 1500 mcg (once daily after breakfast for 30 days).\n\nPlain-language explanation:\nThese entries reflect the exact medicine names, strengths, and schedules printed on your prescription. Do not alter your dosage or stop any medicine without consulting your prescribing doctor.",
+      "suggestedQuestions": [
+        "Should I repeat Vitamin B12 or HbA1c tests after finishing the 30-day course?"
+      ],
+      "language": "en",
+      "readingLevel": "standard",
+      "modelVersion": "gemini-4-hydrogen",
+      "createdAt": "2026-11-09T14:01:00.000Z"
+    },
+    {
+      "id": "ana_4",
+      "documentId": "doc_lakshmi_lab",
+      "summary": "CRITICAL SAFETY NOTICE: Hemoglobin is 6.4 g/dL, which triggers the deterministic critical low alert threshold (<= 7.0 g/dL). Please contact a physician or seek prompt medical evaluation.\n\nWhat your report states:\nHemoglobin is 6.4 g/dL (reference 12.0–15.5 g/dL, Critical). Serum Potassium (4.6 mmol/L) and Serum Creatinine (1.1 mg/dL) fall within the printed reference ranges.\n\nPlain-language explanation:\nHemoglobin carries oxygen through the bloodstream. A value of 6.4 g/dL is substantially below the printed reference range and requires timely clinician review.",
+      "suggestedQuestions": [
+        "Does this Hemoglobin result of 6.4 g/dL require urgent medical evaluation or repeat testing today?",
+        "What additional evaluation is needed to understand the low hemoglobin?"
+      ],
+      "language": "en",
+      "readingLevel": "standard",
+      "modelVersion": "gemini-4-hydrogen",
+      "createdAt": "2026-11-11T08:41:00.000Z"
+    }
+  ],
+  "chatMessages": [
+    {
+      "id": "msg_1",
+      "documentId": "doc_cbc_nov",
+      "role": "user",
+      "content": "Why is Vitamin B12 marked Unable to Classify?",
+      "createdAt": "2026-11-08T11:25:00.000Z"
+    },
+    {
+      "id": "msg_2",
+      "documentId": "doc_cbc_nov",
+      "role": "assistant",
+      "content": "Your Vitamin B12 result is listed as 285 pg/mL, but no reference range was printed on the lab sheet. Under our safety rules, values without a printed reference range are never assumed normal and are marked \"Unable to Classify\" so you can confirm the lab’s reference interval with your doctor.",
+      "createdAt": "2026-11-08T11:25:05.000Z"
+    }
+  ],
+  "doctorQuestions": [
+    {
+      "id": "dq_1",
+      "patientId": "pat_aarav",
+      "documentId": "doc_cbc_nov",
+      "question": "My Hemoglobin dropped from 13.4 to 12.1 g/dL — should we check iron or ferritin levels?",
+      "completed": false,
+      "createdAt": "2026-11-08T11:30:00.000Z"
+    },
+    {
+      "id": "dq_2",
+      "patientId": "pat_lakshmi",
+      "documentId": "doc_lakshmi_lab",
+      "question": "Urgent review needed for Hemoglobin 6.4 g/dL flagged on Nov 11 report.",
+      "completed": false,
+      "createdAt": "2026-11-11T08:45:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_fe3ac05c",
+      "actor": "Aarav Rao",
+      "action": "USER_LOGIN",
+      "targetType": "User",
+      "targetId": "usr_aarav",
+      "timestamp": "2026-11-13T11:26:24.045Z"
+    },
+    {
+      "id": "aud_148a2987",
+      "actor": "Aarav Rao",
+      "action": "USER_LOGOUT",
+      "targetType": "User",
+      "targetId": "usr_aarav",
+      "timestamp": "2026-11-13T11:26:14.037Z"
+    },
+    {
+      "id": "aud_45224a14",
+      "actor": "Aarav Rao",
+      "action": "USER_LOGIN",
+      "targetType": "User",
+      "targetId": "usr_aarav",
+      "timestamp": "2026-11-13T10:33:46.893Z"
+    },
+    {
+      "id": "aud_52b0af4b",
+      "actor": "Aarav Rao",
+      "action": "USER_LOGOUT",
+      "targetType": "User",
+      "targetId": "usr_aarav",
+      "timestamp": "2026-11-13T09:56:40.078Z"
+    },
+    {
+      "id": "aud_677beae4",
+      "actor": "Aarav Rao",
+      "action": "USER_LOGIN",
+      "targetType": "User",
+      "targetId": "usr_aarav",
+      "timestamp": "2026-11-13T09:56:39.956Z"
+    },
+    {
+      "id": "aud_a40577f6",
+      "actor": "Safety Verification",
+      "action": "DOCUMENT_REJECTED_DISGUISED_FILE:resume_disguised_as_report.pdf",
+      "targetType": "MedicalDocument",
+      "targetId": "rejected",
+      "timestamp": "2026-11-13T09:41:08.510Z"
+    },
+    {
+      "id": "aud_1",
+      "actor": "Aarav Rao",
+      "action": "DOCUMENT_ANALYZED",
+      "targetType": "MedicalDocument",
+      "targetId": "doc_cbc_nov",
+      "timestamp": "2026-11-08T11:21:00.000Z"
+    },
+    {
+      "id": "aud_2",
+      "actor": "System Deterministic Engine",
+      "action": "CRITICAL_ALERT_TRIGGERED:hemoglobin",
+      "targetType": "HealthAlert",
+      "targetId": "doc_lakshmi_lab",
+      "timestamp": "2026-11-11T08:40:30.000Z"
+    }
+  ],
+  "rulesVersion": "1.0.0-draft-requires-clinical-review",
+  "users": [
+    {
+      "id": "usr_aarav",
+      "fullName": "Aarav Rao",
+      "email": "aarav.rao@example.com",
+      "phone": "+91 98450 22190",
+      "dateOfBirth": "1988-04-12",
+      "bloodGroup": "O+",
+      "emergencyContact": "Priya Rao (+91 98450 22191)",
+      "preferredLanguage": "en",
+      "readingLevel": "standard",
+      "consentAccepted": true,
+      "consentTimestamp": "2026-11-10T09:30:00.000Z",
+      "createdAt": "2026-11-10T09:30:00.000Z",
+      "lastLoginAt": "2026-11-13T11:26:24.045Z",
+      "passwordHash": "2195316e5f7cde5da5ee2a0150e6938c:c9054747d4d623fddae29a3f213ec7b5c413ad129d85244bed74611efe4b84f8570ad5e51565da75d22032e028e5db4065cf8bf09b9d91df94e056593c10e61b"
+    },
+    {
+      "id": "usr_priya",
+      "fullName": "Priya Rao",
+      "email": "priya.rao@example.com",
+      "phone": "+91 98450 22191",
+      "dateOfBirth": "1990-07-19",
+      "bloodGroup": "A+",
+      "emergencyContact": "Aarav Rao (+91 98450 22190)",
+      "preferredLanguage": "en",
+      "readingLevel": "standard",
+      "consentAccepted": true,
+      "consentTimestamp": "2026-11-10T09:30:00.000Z",
+      "createdAt": "2026-11-10T09:30:00.000Z",
+      "lastLoginAt": "2026-11-10T09:30:00.000Z",
+      "passwordHash": "83eb1517e1345455725c71d3189df311:cdc6bf64b38d77bd084963ed4fb5ed2173efc052682cf633e4050dccc6b3844299b3093747166b49c1d49aa7b9252ff13f16943cadd2170ffaf35282e8c46fb2"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "a87e515f9cfa012a6dd5ed6bd945fd4b858c8f94cff40648c97f556aad7b2814",
+      "userId": "usr_aarav",
+      "createdAt": "2026-11-13T11:26:24.045Z",
+      "expiresAt": "2026-11-20T11:26:24.045Z"
+    }
+  ]
+}
